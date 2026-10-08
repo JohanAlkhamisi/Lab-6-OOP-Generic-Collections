@@ -26,6 +26,7 @@
             //går igenom stacken + skriver ut varje medarbetare
             foreach (Employe employe in employesStack)
             {
+                // 
                 Console.WriteLine($"Items left in the Stack = {employesStack.Count} ");
                 Console.WriteLine($"{employe.Id} - {employe.Name} - {employe.Gender} - {employe.Salary}");
             }
@@ -62,24 +63,24 @@
             //peek körs 2 gng och visar översta personen utan att ta bort den. Det är därför Erik visas 2 gng
             for (int i = 0; i < 2; i++)
             {
-                Employe Topemploye = employesStack.Peek();
+                Employe topEmploye = employesStack.Peek();
 
-                Console.WriteLine($"{Topemploye.Id} - {Topemploye.Name} - {Topemploye.Gender} - {Topemploye.Salary}");
+                Console.WriteLine($"{topEmploye.Id} - {topEmploye.Name} - {topEmploye.Gender} - {topEmploye.Salary}");
                 Console.WriteLine($"Items left in the stack = {employesStack.Count} ");
             }
 
 
             Console.WriteLine("-----------------------------");
             
-            //Kollar om emp2 finns i stacken alltså Sara
+            //Kollar om emp3 finns i stacken alltså Ali
 
             if (employesStack.Contains(employe2))
             {
-                Console.WriteLine($"{employe2.Id} - {employe2.Name}, is in the stack");
+                Console.WriteLine($"{employe3.Id} - {employe3.Name}, is in the stack");
             }
             else
             {
-                Console.WriteLine($"{employe2.Id} - {employe2.Name} is not in the Stack!");
+                Console.WriteLine($"{employe3.Id} - {employe3.Name} is not in the Stack!");
             }
 
             Console.WriteLine("-----------------------------");
@@ -93,15 +94,15 @@
             employeList.Add(employe4);
             employeList.Add(employe5);
 
-            //kollar om emp3 finns i listan, alltså Ali 
-            if (employeList.Contains(employe3))
+            //kollar om emp2 finns i listan, alltså Sara 
+            if (employeList.Contains(employe2))
             {
-                Console.WriteLine("Employe3 object exists in the list");
+                Console.WriteLine("Employe2 object exists in the list");
 
             }
             else
             {
-                Console.WriteLine("Employe3 object does not exists in the list");
+                Console.WriteLine("Employe2 object does not exists in the list");
             }
 
             Console.WriteLine();
@@ -112,16 +113,16 @@
             //skriver ut pers om find hittar någon
             if (foundEmploye != null)
             {
-                Console.WriteLine($"ID = {foundEmploye.Id}, Name = {foundEmploye.Name}, Gender = {foundEmploye.Gender}, Salary = {foundEmploye.Salary}"); ;
+                Console.WriteLine($"ID = {foundEmploye.Id}, Name = {foundEmploye.Name}, Gender = {foundEmploye.Gender}, Salary = {foundEmploye.Salary}");
             }
 
             Console.WriteLine();
             
             // findall skapar en lista med alla som har manligt kön 
-            List<Employe> GenderEmploye = employeList.FindAll(employe => employe.Gender == "Male");
+            List<Employe> genderEmploye = employeList.FindAll(employe => employe.Gender == "Male");
             
             //skriver ut pers med manligt kön i den nya listan.
-            foreach (Employe employe in GenderEmploye)
+            foreach (Employe employe in genderEmploye)
             {
                 Console.WriteLine($"ID = {employe.Id}, Name = {employe.Name}, Gender = {employe.Gender}, Salary = {employe.Salary}");
             }
