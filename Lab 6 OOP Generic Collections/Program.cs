@@ -74,7 +74,7 @@
             
             //Kollar om emp3 finns i stacken alltså Ali
 
-            if (employesStack.Contains(employe2))
+            if (employesStack.Contains(employe3))
             {
                 Console.WriteLine($"{employe3.Id} - {employe3.Name}, is in the stack");
             }
